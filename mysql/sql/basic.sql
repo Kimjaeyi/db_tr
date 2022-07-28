@@ -27,3 +27,11 @@ ALTER TABLE member2 DROP COLUMN dob;
 DELETE FROM member WHERE immseq = 1;
 
 -- commit / rollback
+
+SELECT * FROM member2;
+
+-- 데이터 수정
+UPDATE member
+SET name = "rasberry" 
+, id = "rrr"
+WHERE immseq = 6;
