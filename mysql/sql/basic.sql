@@ -19,3 +19,11 @@ ALTER TABLE member2 MODIFY COLUMN nickname VARCHAR(100);
 -- 컬럼 이름 변경
 ALTER TABLE member2 CHANGE COLUMN nickname nick VARCHAR(45);
 ALTER TABLE member2 CHANGE COLUMN nameEng nameKor VARCHAR(45);
+
+-- 컬럼 삭제
+ALTER TABLE member2 DROP COLUMN dob;
+
+-- row 삭제
+DELETE FROM member WHERE immseq = 1;
+
+-- commit / rollback
