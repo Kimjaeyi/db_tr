@@ -32,6 +32,36 @@ SELECT * FROM member2;
 
 -- 데이터 수정
 UPDATE member
-SET name = "rasberry" 
+SET name = "raspberry" 
 , id = "rrr"
 WHERE immseq = 6;
+
+-- 단어에 포함된 키워드로 검색
+SELECT * FROM member2
+WHERE 1=1
+-- AND name like 'Je%'
+-- AND name like '%ny'
+AND name like '%ny%';
+
+SELECT * FROM member2
+WHERE 1=1
+-- AND delNy = 0
+-- AND delNy > 1
+-- AND delNy .= 1
+AND delNy between 0 and 1;
+
+-- null값 검색은 = 등호가 아닌 is를 쓸 것
+SELECT * FROM member2
+WHERE 1=1
+AND nameKor is null;
+-- AND nameKor = null;
+
+SELECT * FROM member2;
+
+INSERT INTO member2(nick, name, nameKor, id)
+VALUES("planet", "earth", "jigoo", "kjg");
+
+SELECT * FROM member2
+WHERE 1=1
+AND nameKor = "";
+
