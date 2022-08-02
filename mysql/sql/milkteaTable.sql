@@ -16,7 +16,13 @@ SELECT *
 FROM opt;
 
 SELECT *
+FROM order_product;
+
+SELECT *
 FROM product_review;
+
+SELECT *
+FROM product_qna;
 
 
 
