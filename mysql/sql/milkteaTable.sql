@@ -24,5 +24,11 @@ FROM product_review;
 SELECT *
 FROM product_qna;
 
+SELECT *
+FROM CodeGroup;
+
+SELECT *
+FROM Code;
+
 
 
