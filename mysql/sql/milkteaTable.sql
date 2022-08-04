@@ -16,6 +16,9 @@ SELECT *
 FROM opt;
 
 SELECT *
+FROM optiondetail;
+
+SELECT *
 FROM order_product;
 
 SELECT *
@@ -29,6 +32,3 @@ FROM CodeGroup;
 
 SELECT *
 FROM Code;
-
-
-
