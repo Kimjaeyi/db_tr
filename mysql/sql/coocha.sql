@@ -24,5 +24,5 @@ SELECT
     ,b.total_price
     ,b.payment
 FROM member a
-inner join orderpg b on b.noopgseq = a.immseq
+inner join orderpg b on b.member_immseq = a.immseq
 ;
