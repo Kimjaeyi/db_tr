@@ -1,5 +1,12 @@
 use milktea;
 
+-- join문
+-- 1) Master: data.full
+-- left.Join
+
+-- 2) Slave data exist
+-- (inner)Join
+
 select
 	a.ifmmSeq
     ,a.ifmmName
@@ -29,6 +36,21 @@ SELECT
     ,b.name
 FROM CodeGroup a
 inner join Code b on b.ccg_noccg = a.noccg
+;
+
+-- DefaultNY
+SELECT
+	a.impseq
+    , a.title
+    , a.price
+    , b.name
+FROM product a
+	left join site b on 1=1
+		and b.seq = a.site_seq
+        and a.DefaultNY = 1
+ORDER BY
+	a.title
+    -- a.date desc
 ;
 
 -- where 1=1

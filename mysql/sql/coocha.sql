@@ -1,5 +1,7 @@
 use milktea;
 
+-- 1. defaultNy 설계 2. subQuery 3. Order by
+
 -- 공통코드
 SELECT
 	a.noccg
