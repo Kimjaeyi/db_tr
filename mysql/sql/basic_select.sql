@@ -45,7 +45,7 @@ SELECT
     , a.price
     , b.name
 FROM product a
-	left join site b on 1=1
+	inner join site b on 1=1
 		and b.seq = a.site_seq
         and a.DefaultNY = 1
 ORDER BY
@@ -53,9 +53,59 @@ ORDER BY
     -- a.date desc
 ;
 
--- where 1=1
--- order by
+-- subquery
+SELECT
+    (SELECT a.id FROM member a WHERE b.writer = a.id) AS id
+    , b.title
+    , b.date
+    , b.question
+    , b.manager
+    , b. answer
+FROM product_qna b
+;
 
--- group by
+-- order by
+SELECT
+	a.impseq
+    , a.title
+    , a.price
+    , b.name
+FROM product a
+	INNER JOIN site b on 1=1
+		and b.seq = a.site_seq
+ORDER BY
+	a.price DESC
+;
 
 -- union
+SELECT
+	a.immseq
+    , a.name
+    , a.id
+    , a.dob
+    , a.phone
+    , b.point
+FROM member a
+	inner join orderpg b on 1=1
+		and b.noopgseq = a.immseq
+	WHERE 1=1
+		AND a.dob like '%19%'
+UNION ALL
+	SELECT
+	a.immseq
+    , a.name
+    , a.id
+    , a.dob
+    , a.phone
+    , b.point
+FROM member a
+	inner join orderpg b on 1=1
+		and b.noopgseq = a.immseq
+	WHERE 1=1
+		AND a.phone like '%3%'
+;
+
+
+-- group by&having
+
+-- union과 union all의 차이 : union은 중복값 제거 후 출력하지만 union all은 중복값 포함 있는 그대로 출력. 그래서 union all의 속도가 빠름.
