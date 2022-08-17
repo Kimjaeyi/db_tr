@@ -90,7 +90,7 @@ FROM member a
 		and b.noopgseq = a.immseq
 	WHERE 1=1
 		AND a.dob like '%19%'
-UNION ALL
+UNION ALL 
 	SELECT
 	a.immseq
     , a.name
