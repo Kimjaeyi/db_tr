@@ -35,3 +35,7 @@ FROM Code;
 
 SELECT *
 FROM site;
+
+SELECT *
+FROM productUploaded
+;
