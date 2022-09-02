@@ -27,4 +27,16 @@ SELECT
 FROM CodeGroup a
 ;
 
+SELECT
+	a.seq
+	, (SELECT b.name_eng FROM Code b WHERE a.membership = b.codeNum) AS membership
+    , a.name
+	, a.dob
+	, a.email
+	, a.phone
+	, a.regDate
+	, a.delNY
+FROM member a
+;
+
 

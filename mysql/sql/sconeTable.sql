@@ -35,3 +35,6 @@ FROM CodeGroup;
 
 SELECT *
 FROM Code;
+
+SELECT *
+FROM codeGroup2;
