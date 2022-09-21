@@ -34,6 +34,7 @@ SELECT *
 FROM CodeGroup;
 
 SELECT *
+
 FROM Code;
 
 SELECT *
