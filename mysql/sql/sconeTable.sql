@@ -35,4 +35,3 @@ FROM CodeGroup;
 
 SELECT *
 FROM Code;
-
