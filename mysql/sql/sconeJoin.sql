@@ -25,6 +25,7 @@ SELECT
 	, a.useNY
 	, a.delNY
 FROM CodeGroup a
+<<<<<<< HEAD
 ;
 
 SELECT
@@ -79,3 +80,6 @@ SELECT
             FROM item a
 			inner join Code b ON a.deliverymethod = b.seq
 		WHERE 1=1;
+=======
+;
+>>>>>>> refs/remotes/origin/main
