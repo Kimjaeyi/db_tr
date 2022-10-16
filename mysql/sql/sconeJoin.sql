@@ -39,4 +39,43 @@ SELECT
 FROM member a
 ;
 
-
+SELECT
+			a.seq
+			, b.cdname_ko
+			, a.name
+			, a.grade
+			, a.gender
+			, a.dob
+			, a.id
+			, a.pwd
+			, a.email
+			, a.emailID
+			, a.emailDomain
+			, a.telecom
+			, a.phone
+			, a.zipcode
+			, a.addr1
+			, a.addr2
+			, a.addr3
+			, a.validity
+			, a.regDate
+			, a.delNY
+            FROM member a
+			inner join Code b ON a.grade = b.seq
+		WHERE 1=1;
+        
+        SELECT
+			a.seq
+			, a.title
+			, a.discount
+			, a.price
+			, a.deliverymethod
+			, b.cdname_ko
+			, a.stock
+			, a.regDate
+			, a.modDate
+			, a.useNY
+			, a.delNY
+            FROM item a
+			inner join Code b ON a.deliverymethod = b.seq
+		WHERE 1=1;
