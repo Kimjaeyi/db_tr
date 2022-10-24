@@ -22,7 +22,10 @@ SELECT *
 FROM payment;
 
 SELECT *
-FROM buy_item;
+FROM buyItem;
+
+SELECT *
+FROM coupon;
 
 SELECT *
 FROM orderlist;
@@ -35,10 +38,6 @@ FROM CodeGroup;
 
 SELECT *
 FROM Code;
-
-SELECT *
-<<<<<<< HEAD
-FROM codeGroup2;
 
 SELECT *
 FROM itemUploaded;
@@ -86,4 +85,3 @@ CREATE TABLE `itemUploaded` (
   `regDateTimeSvr` datetime DEFAULT NULL,
   PRIMARY KEY (`seq`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
->>>>>>> refs/remotes/origin/main
