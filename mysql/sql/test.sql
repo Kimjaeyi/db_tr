@@ -1,5 +1,7 @@
 use test;
 
+SELECT * FROM member;
+
 CREATE TABLE IF NOT EXISTS `mydb`.`member` (
   `seq` INT NOT NULL AUTO_INCREMENT,
   `firstname` VARCHAR(45) NULL,
@@ -21,4 +23,28 @@ CREATE TABLE IF NOT EXISTS `mydb`.`member` (
   `memo` VARCHAR(100) NULL,
   PRIMARY KEY (`seq`))
 ENGINE = InnoDB
+;
+
+DELIMITER $$
+CREATE FUNCTION getmemberName (
+seq bigint
+) 
+RETURNS varchar(100)
+BEGIN
+	
+    declare rtName varchar(100);
+
+	select
+		name into rtName
+	from
+		member
+	where 1=1
+		and seq = seq
+	;
+
+	RETURN rtName;
+END$$
+DELIMITER ;
+
+SET GLOBAL log_bin_trust_function_creators = 1
 ;

@@ -62,9 +62,7 @@ SELECT
 			, a.delNY
             FROM item a
 			inner join Code b ON a.deliverymethod = b.seq
-		WHERE 1=1
-=======
-FROM itemUploaded;
+		WHERE 1=1;
 
 CREATE TABLE `itemUploaded` (
   `seq` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -85,3 +83,46 @@ CREATE TABLE `itemUploaded` (
   `regDateTimeSvr` datetime DEFAULT NULL,
   PRIMARY KEY (`seq`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 인덱스 생성 및 삭제 s --
+SHOW INDEX FROM member;
+
+CREATE INDEX abc ON member (delNY, name);
+
+ALTER TABLE member DROP INDEX abc;
+-- 인덱스 생성 및 삭제 e --
+
+-- 뷰 생성 및 삭제 s --
+CREATE VIEW memberV
+AS
+SELECT
+	a.seq
+	, b.cdname_ko
+	, a.name
+	, a.grade
+	, a.gender
+	, a.dob
+	, a.id
+	, a.pwd
+	, a.email
+	, a.emailID
+	, a.emailDomain
+	, a.telecom
+	, a.phone
+	, a.zipcode
+	, a.addr1
+	, a.addr2
+	, a.addr3
+	, a.validity
+	, a.regDate
+	, a.delNY
+FROM member a
+inner join Code b ON a.grade = b.seq
+WHERE 1=1;
+
+SELECT * FROM memberV
+;
+
+DROP VIEW memberV
+;
+-- 뷰 생성 및 삭제 e --
