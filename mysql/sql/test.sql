@@ -39,7 +39,7 @@ BEGIN
 	from
 		member
 	where 1=1
-		and seq = seq
+		and seq = seqgetmemberName
 	;
 
 	RETURN rtName;
