@@ -19,16 +19,10 @@ SELECT *
 FROM mypage;
 
 SELECT *
-FROM payment;
-
-SELECT *
-FROM buyItem;
+FROM itemOrder;
 
 SELECT *
 FROM coupon;
-
-SELECT *
-FROM orderlist;
 
 SELECT *
 FROM sellerinfo;
